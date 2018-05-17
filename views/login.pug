@@ -1,0 +1,25 @@
+header
+    title Connexion
+    p.cop By TheoCib©
+    if user
+        h1 Profil de #{user.firstname}
+        a.connect(href="/api/logout") Se deconnecter
+    else
+        h1 Se connecter
+    link(rel="stylesheet", href="/stylesheets/styles.css")
+body
+    if user
+        h1 Vous êtes connecté sous #{user.firstname}
+        div.post
+            p Prénom: #{user.firstname}
+            p Nom: #{user.lastname}
+            p Email: #{user.email}
+        a(href="/") Retour à la liste
+    else
+        form.addform(method="POST")
+            input(type="text", name="username", placeholder="Email")
+            input(type="password", name="password", placeholder="Mot de passe")
+            button(type="submit") Se connecter
+            a(href="/signup") Pas encore de compte ?
+            a(href="/") Retour à la liste
+

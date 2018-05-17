@@ -1,0 +1,16 @@
+header
+    title Créer un compte.
+    p.cop By TheoCib©
+    h1 Créer votre compte
+    link(rel="stylesheet", href="/stylesheets/styles.css")
+
+body
+    form.addform(method="POST")
+        input(type="text", name="firstname", placeholder="Prénom")
+        input(type="text", name="lastname", placeholder="Nom")
+        input(type="text", name="email", placeholder="aze.ty@mail.com")
+        input(type="password", name="password", placeholder="Mot de passe")
+        button(type="submit") S'inscrire
+        br
+        a(href="/login") Déja un compte? Se connecter
+        a(href="/") Retour à la liste
