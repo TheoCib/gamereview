@@ -1,0 +1,33 @@
+{
+  "name": "gamereview",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.16.3",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "mysql2": "^1.5.3",
+    "pug": "^2.0.3",
+    "sequelize": "^4.37.7"
+  },
+  "description": "Projet NodeJS GameReview",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheoCib/gamereview.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheoCib/gamereview/issues"
+  },
+  "homepage": "https://github.com/TheoCib/gamereview#readme"
+}

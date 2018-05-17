@@ -1,0 +1,69 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  background-color: #dadada;
+  text-align: center;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+  border: 2px solid #00B7FF ;
+  border-radius: 5px;
+  padding: 1px;
+  margin-top: 10px;
+}
+
+header {
+    text-align: center;
+    background-color: cornflowerblue;
+    padding: 4rem 1rem 2rem 1rem;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    margin-bottom: 20px;
+}
+
+.post{
+    text-align: center;
+    border: 3px solid gray;
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.postdetail{
+    text-align: center;
+    border: 3px solid gray;
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.btn{
+    display: inline;
+}
+
+.comment{
+    background-color: white;
+    text-align: center;
+    border: 2px solid black;
+    margin-right:500px;
+    margin-left: 500px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.addform{
+    display: inline-grid;
+}
+
+.cop{
+    text-align: right;
+}
+
+.addlink{
+    font-size: 20px;
+}
+

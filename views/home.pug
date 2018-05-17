@@ -1,0 +1,22 @@
+header
+    title GameReviewProjet
+    h1 Game Reviewer
+    p.cop By TheoCib©
+    link(rel="stylesheet", href="/stylesheets/styles.css")
+
+body
+    a.addlink(href="/addpost") Créer une review
+    for post in posts
+        article
+            div.post
+                h1 Titre : #{post.title}
+                h1 Likes : #{post.score}
+                p Review : #{post.content}
+                p Note : #{post.grade} /10
+                div.btn
+                    form(method="post", action="/api/post/" + post.id + "/like")
+                        button(type="submit") Like
+                    form(method="post", action="/api/post/" + post.id + "/dislike")
+                        button(type="submit") Dislike
+                a(href="/detail/" + post.id) Details
+    a.addlink(href="/addpost") Créer une review
