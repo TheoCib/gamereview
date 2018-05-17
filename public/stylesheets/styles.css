@@ -10,16 +10,37 @@ a {
   text-decoration: none;
   border: 2px solid #00B7FF ;
   border-radius: 5px;
-  padding: 1px;
+  padding: 5px;
   margin-top: 10px;
+  background-color: whitesmoke;
+}
+a:hover{
+    color: #00B7FF;
+    border: 2px solid #00B7FF ;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    background: none;
 }
 
 header {
     text-align: center;
     background-color: cornflowerblue;
     padding: 4rem 1rem 2rem 1rem;
-    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
     margin-bottom: 20px;
+}
+
+a.connect{
+    text-decoration: none;
+    color: beige;
+    border: none;
+    background: none;
+    text-shadow: none;
+
+}
+a:hover.connect{
+    color: red;
 }
 
 .post{
@@ -30,6 +51,7 @@ header {
     margin-top: 50px;
     margin-bottom: 10px;
     padding-bottom: 10px;
+    background-color: lightgray;
 }
 
 .postdetail{
@@ -41,9 +63,6 @@ header {
     margin-bottom: 10px;
 }
 
-.btn{
-    display: inline;
-}
 
 .comment{
     background-color: white;

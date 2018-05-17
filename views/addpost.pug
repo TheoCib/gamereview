@@ -1,6 +1,19 @@
 header
+    title Ajouter une review
+    p.cop By TheoCib©
     h1 Ajouter une review
     link(rel="stylesheet", href="/stylesheets/styles.css")
+    if user
+        p Compte: #{user.firstname}
+        a.connect(href="/api/logout") Se deconnecter
+        br
+        a.connect(href="/login") Profil
+
+
+    else
+        a.connect(href="/signup") S'inscrire
+        br
+        a.connect(href="/login") Se connecter
 
 body
     form(method="POST")

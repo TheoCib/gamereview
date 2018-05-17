@@ -1,7 +1,17 @@
 header
     title Detail du jeu #{post.title}
     link(rel="stylesheet", href="/stylesheets/styles.css")
+    p.cop By TheoCib©
     h1 Detail du jeu #{post.title}
+    if user
+        p Compte: #{user.firstname}
+        a.connect(href="/api/logout") Se deconnecter
+        br
+        a.connect(href="/login") Profil
+    else
+        a.connect(href="/signup") S'inscrire
+        br
+        a.connect(href="/login") Se connecter
 
 body
     div.postdetail
