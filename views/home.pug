@@ -1,1 +1,16 @@
-p Hello
+header
+    title GameReviewProjet
+    h1 Game Reviewer
+body
+    for post in posts
+        article
+            h1 #{post.title} (#{post.score})
+            p #{post.content}
+            p #{post.grade}
+            a(href="/detail/" + post.id) Details
+            form(method="post", action="/api/post/" + post.id + "/like")
+                button(type="submit") Like
+            form(method="post", action="/api/post/" + post.id + "/dislike")
+                button(type="submit") Dislike
+
+    a(href="/addpost") Créer une review

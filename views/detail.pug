@@ -1,0 +1,13 @@
+header
+    title Detail du jeu #{post.title}
+body
+    h1 Titre #{post.title} Score : #{post.score}
+    p Review #{post.content}
+    p note #{post.grade}
+    for comment in post.comments
+        article
+            p #{comment.comContent}
+form(method="POST")
+    textarea(name="comment", placeholder="Commentaire", rows=7, cols=50)
+    button(type="submit") Commenter
+a(href="/") Retour Menu
