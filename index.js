@@ -6,7 +6,7 @@ const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
-//configuarations
+//configuarations---------------
 const COOKIE_SECRET = 'cookie secret';
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
@@ -21,7 +21,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-//Strategie d'authentification via email + password
+
+//Strategie d'authentification via email + password-------------------
 passport.use(new LocalStrategy((email, password, done) =>{
     User
         .findOne({where:{
@@ -60,7 +61,7 @@ app.get('/api/logout', function(req, res){
     res.redirect('/');
 });
 
-//Initialisation des BDD
+//Initialisation des BDD--------------------------
 const db = new Sequelize('gamereview', 'root', '', {
     host: 'localhost',
     dialect: 'mysql'
@@ -106,16 +107,20 @@ const Comment = db.define('comment', {
    comContent: {type: Sequelize.TEXT}
 });
 
+function sync() {
+    Post.sync();
+    Vote.sync();
+    Comment.sync();
+    User.sync();
+}
+
 Post.hasMany(Vote);
 Vote.belongsTo(Post);
 Post.hasMany(Comment)
 Comment.belongsTo(Post);
-Post.sync();
-Vote.sync();
-Comment.sync();
-User.sync();
+sync()
 
-//Routes
+//Routes----------------------------
 //Page principale
 app.get('/',(req, res) => {
     Post
@@ -151,6 +156,7 @@ app.get('/login' ,(req,res) => {
     res.render("login", {user: req.user})
 });
 
+//POST--------------------------
 //Add une review dans la BDD
 app.post('/addpost', (req,res) => {
    Post
@@ -179,6 +185,7 @@ app.post('/api/post/:postId/dislike', (req,res) =>{
     Vote
         .create({action: 'down', postId: req.params.postId})
         .then (() => res.redirect('/'))
+
 });
 
 //bouton comment (dans detail)
